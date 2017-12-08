@@ -18,7 +18,7 @@ import backtype.storm.tuple.Tuple;
 @SuppressWarnings("serial")
 public class HBaseBolt implements IRichBolt {
 
-	private static final String TABLE_NAME = "table_popotk_hashtag";
+	private static final String TABLE_NAME = "table_poptok_hashtag";
 	private static final String ZOOKEEPER_QUORUM = "hadoop2.poptok.com";
 	private static final String ZOOKEEPER_CLIENT_PORT = "2181";
 
