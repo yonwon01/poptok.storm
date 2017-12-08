@@ -99,7 +99,7 @@
 				<version>1.4</version>
 				<configuration>
 					<outputDirectory>release</outputDirectory>
-					<finalName>com.bigdata2017.smartcar.storm-1.0</finalName>
+					<finalName>com.bigdata2017.poptok.storm-1.0</finalName>
 					<createDependencyReducedPom>true</createDependencyReducedPom>
 					<artifactSet>
 						<excludes>
