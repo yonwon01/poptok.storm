@@ -40,8 +40,8 @@ public class PoptokTopology {
 		
 		// Spout(Kafka) 생성 및 등록
 		BrokerHosts brokerHosts = new ZkHosts( "hadoop2.poptok.com:2181" );
-		String topicName = "test";
-		String zookeeperPathName = "/poptok-topic";
+		String topicName = "Poptok-Topic";
+		String zookeeperPathName = "/Poptok-Topic";
 
 		SpoutConfig spoutConf = new SpoutConfig( brokerHosts, topicName, zookeeperPathName, UUID.randomUUID().toString() );
 		spoutConf.scheme = new SchemeAsMultiScheme( new StringScheme() );
