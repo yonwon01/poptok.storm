@@ -30,7 +30,7 @@ public class PoptokTopology {
 		config.put( Config.NIMBUS_THRIFT_PORT, 6627 );
 		config.put( Config.STORM_ZOOKEEPER_PORT, 2181 );
 		config.put( Config.STORM_ZOOKEEPER_SERVERS, Arrays.asList( "hadoop2.poptok.com" ) );	
-
+		// props.put("enable.auto.commit", "false");
 		// 토폴로지 등록
 		StormSubmitter.submitTopology( args[0], config, makeTopology() );
 	}
