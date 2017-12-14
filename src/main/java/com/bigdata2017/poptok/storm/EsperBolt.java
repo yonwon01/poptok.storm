@@ -57,7 +57,7 @@ public class EsperBolt extends BaseBasicBolt {
 
 		String tValue = tuple.getString(0); 
 
-		//발생일시(14자리), 차량번호, 가속페달, 브레이크페달, 운전대회적각, 방향지시등, 주행속도, 주행지역
+	
 		String[] receiveData = tValue.split("\\,");
 
 		HashtagInfo HashtagInfo = new HashtagInfo();
@@ -70,8 +70,8 @@ public class EsperBolt extends BaseBasicBolt {
 		//LOGGER.error( "sendEvent:" + HashtagInfo.toString() );
 		
 		if( isOverSpeedEvent ) {
-			//발생일시(14자리), 차량번호
-			collector.emit( new Values( HashtagInfo.getHashTag().substring(0,8), 
+			
+			collector.emit( new Values( HashtagInfo.getHashTag().substring(0,2), 
 										HashtagInfo.getLocation() + "-" + HashtagInfo.getDate() ) );//emit으로 다음 bolt로 보내버리는 작업
 			isOverSpeedEvent = false;
 		}		

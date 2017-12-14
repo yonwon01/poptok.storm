@@ -26,7 +26,7 @@ public class HBaseBolt implements IRichBolt {
 	private static final String COLUMN_FAMILY = "cf";
 	private static final boolean IS_BATCH = false;
 	
-	private static final String[] COLUMN_NAMES = { "hashtag", "location" };
+	private static final String[] COLUMN_NAMES = { "hashtag", "location" ,"date"};
 	
 	private HTable hTable;
 	private OutputCollector collector;

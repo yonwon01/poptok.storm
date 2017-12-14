@@ -57,7 +57,7 @@ public class PoptokTopology {
 		
 		
 		// Grouping [kafkaSpout -> esperBolt]
-		 topologyBuilder.setBolt( "esperBolt", new EsperBolt(), 1 ).allGrouping( "kafkaSpout" );		
+		// topologyBuilder.setBolt( "esperBolt", new EsperBolt(), 1 ).allGrouping( "kafkaSpout" );		
 		// Subgrouping [esperBolt -> redisBolt]
 		
 		/*
