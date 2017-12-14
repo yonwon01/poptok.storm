@@ -28,7 +28,7 @@ public class SplitBolt extends BaseBasicBolt {
 
 	
 		collector.emit(new Values(new StringBuffer(receiveData[0]).reverse() + "-" + receiveData[1], receiveData[0],
-				receiveData[1],receiveData[2]));
+				receiveData[1]));
 	}
 
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {
