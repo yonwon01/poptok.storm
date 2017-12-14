@@ -21,18 +21,19 @@ public class SplitBolt extends BaseBasicBolt {
 	public void execute(Tuple tuple, BasicOutputCollector collector) {
 		// TODO Auto-generated method stub
 		String tValue = tuple.getString(0);
+		LOGGER.error(tValue);
 		String[] receiveData = tValue.split("\\,");
 
 		LOGGER.error(Arrays.toString(receiveData));
 
-		// 발생일시(14자리), 차량번호, 가속페달, 브레이크페달, 운전대회적각, 방향지시등, 주행속도, 주행지역
+	
 		collector.emit(new Values(new StringBuffer(receiveData[0]).reverse() + "-" + receiveData[1], receiveData[0],
-				receiveData[1]));
+				receiveData[1],receiveData[2]));
 	}
 
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {
 		// TODO Auto-generated method stub
-		declarer.declare(new Fields("hashtag", "location"));
+		declarer.declare(new Fields("hashtag", "location" ,"date"));
 	}
 
 }
