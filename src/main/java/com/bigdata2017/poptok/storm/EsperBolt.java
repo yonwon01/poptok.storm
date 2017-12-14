@@ -39,7 +39,7 @@ public class EsperBolt extends BaseBasicBolt {
 		
 		String eplOverSpeed =  
 				"select hashtag, count(*)" + 
-				"from table " + 
+				"from table_poptok_hashtag " + 
 				"group by hashtag";//win-> epl로 시간 속도 새는것
 		EPStatement stmtESP = espService.getEPAdministrator().createEPL( eplOverSpeed );
 		stmtESP.addListener( new UpdateListener(){
